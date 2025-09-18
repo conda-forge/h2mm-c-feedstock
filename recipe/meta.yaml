@@ -30,12 +30,10 @@ requirements:
     - setuptools-scm >=8.0
     - wheel
     - cython
-    - ipython
     - numpy
     - pip
   run:
     - python
-    - ipython
     - importlib-metadata
     - numpy
 

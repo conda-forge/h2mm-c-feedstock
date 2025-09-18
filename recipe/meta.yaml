@@ -1,4 +1,4 @@
-{% set version = "1.0.5" %}
+{% set version = "2.0.5" %}
 
 
 package:
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://github.com/harripd/H2MMpythonlib/archive/{{ version }}.tar.gz
-  sha256: 949ab32a3255d286fbb09b2bb9918bac21d4fd6c0cb4216dfc264bf82fa827ce
+  sha256: 465b285e59f9b75e1a7e9b4b190e4a9661cca0363c6f5d07c89d491db13b2027
 
 build:
-  skip: true   # [py<37]
-  script_env: 
+  skip: true  # [py<37]
+  script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
   script: "{{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation"
-  number: 3
+  number: 0
 
 requirements:
   build:
@@ -30,14 +30,14 @@ requirements:
     - setuptools-scm >=8.0
     - wheel
     - cython
-    - ipython
     - numpy
     - pip
+    - ipython
   run:
     - python
-    - ipython
     - importlib-metadata
     - numpy
+    - ipython
 
 test:
   imports:

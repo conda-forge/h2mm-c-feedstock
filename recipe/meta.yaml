@@ -1,4 +1,4 @@
-{% set version = "2.0.6" %}
+{% set version = "2.1.1" %}
 
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/harripd/H2MMpythonlib/archive/{{ version }}.tar.gz
-  sha256: cc798bb1a05b5332047bea9eb27c212e1ec0bbef670b9d816ab5643eab31fb55
+  sha256: 9492de95a73e6d1f9cb498f447827be2cd4beaacffbd408653f3cc7b84f5901a
 
 build:
   skip: true  # [py<37]
